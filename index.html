@@ -1,73 +1,198 @@
-index.html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>María Angélica Rueda | Data Analyst</title>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <h1>María Angélica Rueda</h1>
-    <h2>Junior Data Analyst</h2>
+:root{
+  --bg:#f5f7fa;
+  --paper:#ffffff;
+  --ink:#0f172a;
+  --muted:#475569;
+  --line:#e2e8f0;
+  --accent:#1f3a5f;
+  --chip:#eef2ff;
+  --shadow: 0 10px 30px rgba(15,23,42,.08);
+}
 
-    <h3>Sobre mí</h3>
-    <p>
-        Soy analista de datos con formación en análisis, SQL, Python y visualización.
-        Me enfoco en transformar datos en información clara para apoyar decisiones.
-    </p>
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+}
 
-    <h3>Proyectos</h3>
-    <ul>
-       <hr style="border:none;border-top:1px solid #eee;margin:18px 0;">
+.page{
+  max-width: 1060px;
+  margin: 24px auto;
+  padding: 0 16px 24px;
+}
 
-<h4>Proyecto 3: Panel de Control Web desplegado en la nube</h4>
-<p><strong>Contexto:</strong> Desarrollo de una aplicación web tipo panel de control,
-creando y gestionando entornos virtuales de Python, estructurando el proyecto
-y desplegándolo en un servicio en la nube.</p>
+.header{
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  border-radius:16px;
+  padding:20px 22px;
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  justify-content:space-between;
+}
 
-<p><strong>Análisis / Desarrollo:</strong>
-Implementé un entorno virtual, gestioné dependencias, estructuré el proyecto
-siguiendo buenas prácticas y configuré el despliegue en la nube para que la
-aplicación estuviera disponible públicamente.</p>
+.name{
+  margin:0;
+  font-size:28px;
+  letter-spacing:-0.02em;
+}
+.role{
+  margin:6px 0 0;
+  font-weight:600;
+  color:var(--accent);
+}
+.tagline{
+  margin:6px 0 0;
+  color:var(--muted);
+}
 
-<p><strong>Conclusiones:</strong>
-Este proyecto fortaleció mis habilidades en herramientas de desarrollo,
-gestión de entornos, despliegue y flujo profesional de trabajo en ingeniería de software.</p>
+.contact{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:6px;
+  min-width: 360px;
+}
+.contact li{
+  display:grid;
+  grid-template-columns: 92px 1fr;
+  gap:10px;
+  font-size:13px;
+}
+.label{color:var(--muted);}
+.value{color:var(--ink);}
+.link{color:var(--accent); text-decoration: none;}
+.link:hover{text-decoration: underline;}
 
-<p class="muted">Herramientas: Python, entornos virtuales (venv), Git, GitHub, despliegue en la nube.</p>
-        <div class="card">
-<h3>Proyectos</h3>
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:16px;
+  margin-top:16px;
+}
 
-<h4>Panel de Control Web desplegado en la nube</h4>
-<p><strong>Descripción:</strong> Desarrollo de una aplicación web tipo panel de control estructurada con buenas prácticas y desplegada en la nube.</p>
+@media (min-width: 960px){
+  .grid{
+    grid-template-columns: 340px 1fr;
+    align-items:start;
+  }
+}
 
-<p><strong>Mi rol:</strong> Configuré el entorno virtual, gestioné dependencias, estructuré el proyecto y realicé el despliegue.</p>
+.col{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
 
-<p><strong>Tecnologías:</strong> Python, Git, GitHub, entornos virtuales (venv), cloud deployment.</p>
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  border-radius:16px;
+  padding:18px 18px;
+}
 
-<p>
-<a target="_blank" href="https://github.com/mangelicam02-boop/my-new-repo">💻 Ver código</a>
-</p>
+.section-title{
+  margin:0 0 10px;
+  font-size:14px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
 
-<hr>
+.text{
+  margin:0;
+  color:var(--ink);
+  line-height:1.55;
+  font-size:14px;
+}
 
-<h4>Limpieza y transformación de datos con Python</h4>
-<p><strong>Descripción:</strong> Proyecto de procesamiento y limpieza de datos donde transformé un dataset sin estructura en un DataFrame organizado y analizable.</p>
+.skills{display:flex; flex-direction:column; gap:12px;}
+.skills__title{
+  margin:0 0 8px;
+  font-size:13px;
+  color:var(--ink);
+}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{
+  display:inline-flex;
+  padding:7px 10px;
+  border-radius:999px;
+  background:var(--chip);
+  border:1px solid var(--line);
+  font-size:12px;
+  color:var(--ink);
+}
 
-<p><strong>Mi rol:</strong> Separé variables, limpié datos, estructuré columnas automáticamente y validé resultados usando Python.</p>
+.list{
+  margin:0;
+  padding-left:18px;
+  color:var(--ink);
+  line-height:1.6;
+  font-size:14px;
+}
+.bold{font-weight:600;}
+.muted{color:var(--muted);}
+.small{font-size:12px;}
 
-<p><strong>Tecnologías:</strong> Python, Pandas, Jupyter Notebook.</p>
+.edu{display:flex; flex-direction:column; gap:10px;}
+.edu__top{display:flex; flex-direction:column; gap:4px; font-size:14px;}
 
-<p>
-<a target="_blank" href="https://github.com/mangelicam02">💻 Ver repositorios</a>
-</p>
+.project{border-top:1px solid var(--line); padding-top:14px; margin-top:14px;}
+.project:first-of-type{border-top:none; padding-top:0; margin-top:0;}
+.project__header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.project__title{
+  margin:0;
+  font-size:15px;
+  font-weight:700;
+}
+.badge{
+  font-size:12px;
+  padding:6px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--accent);
+  background:#f8fafc;
+  white-space:nowrap;
+}
 
-</div>
+.job{border-top:1px solid var(--line); padding-top:14px; margin-top:14px;}
+.job:first-of-type{border-top:none; padding-top:0; margin-top:0;}
+.job__top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+.job__title{margin:0; font-size:15px; font-weight:700;}
+.job__role{margin:4px 0 0; color:var(--accent); font-weight:600;}
+.job__meta{display:flex; flex-direction:column; gap:4px; text-align:right; font-size:12px;}
 
+.bullets{
+  margin:10px 0 0;
+  padding-left:18px;
+  line-height:1.55;
+  font-size:14px;
+}
 
-    </ul>
+.footer{margin-top:2px;}
 
-    <h3>Contacto</h3>
-    <p>Email: mangelicam02@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/mar%C3%ADa-ang%C3%A9lica-rueda-monsalve-33a309142/" target="_blank">Mi LinkedIn</a></p>
-</body>
-</html>Add initial portfolio structure
+/* PRINT: clean A4-like output */
+@media print{
+  body{background:#fff;}
+  .page{margin:0; padding:0;}
+  .header, .card{box-shadow:none;}
+  .header, .card{border-color:#d1d5db;}
+  a{color:#000; text-decoration:none;}
+}
