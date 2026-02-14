@@ -1,198 +1,143 @@
-:root{
-  --bg:#f5f7fa;
-  --paper:#ffffff;
-  --ink:#0f172a;
-  --muted:#475569;
-  --line:#e2e8f0;
-  --accent:#1f3a5f;
-  --chip:#eef2ff;
-  --shadow: 0 10px 30px rgba(15,23,42,.08);
-}
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>María Angélica Rueda | Junior Data Analyst</title>
+  <meta name="description" content="Portfolio CV - María Angélica Rueda | Data Analytics, Finance & Business." />
 
-*{box-sizing:border-box;}
-html,body{height:100%;}
-body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-}
+  <!-- Fuente moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-.page{
-  max-width: 1060px;
-  margin: 24px auto;
-  padding: 0 16px 24px;
-}
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-.header{
-  background:var(--paper);
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-  border-radius:16px;
-  padding:20px 22px;
-  display:flex;
-  gap:18px;
-  align-items:flex-start;
-  justify-content:space-between;
-}
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div>
+        <h1 class="name">María Angélica Rueda</h1>
+        <p class="subtitle">Junior Data Analyst · Finance & Business</p>
+      </div>
 
-.name{
-  margin:0;
-  font-size:28px;
-  letter-spacing:-0.02em;
-}
-.role{
-  margin:6px 0 0;
-  font-weight:600;
-  color:var(--accent);
-}
-.tagline{
-  margin:6px 0 0;
-  color:var(--muted);
-}
+      <div class="actions">
+        <a class="btn btn--ghost" href="mailto:mangelicam02@gmail.com">mangelicam02@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/mar%C3%ADa-ang%C3%A9lica-rueda-monsalve-33a309142/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <!-- Cambia el link de GitHub -->
+        <a class="btn" href="https://github.com/tu-usuario" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </header>
 
-.contact{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  gap:6px;
-  min-width: 360px;
-}
-.contact li{
-  display:grid;
-  grid-template-columns: 92px 1fr;
-  gap:10px;
-  font-size:13px;
-}
-.label{color:var(--muted);}
-.value{color:var(--ink);}
-.link{color:var(--accent); text-decoration: none;}
-.link:hover{text-decoration: underline;}
+  <main class="container grid">
+    <!-- Columna izquierda -->
+    <aside class="card sidebar">
+      <h2 class="section-title">Sobre mí</h2>
+      <p class="text">
+        Soy analista de datos en formación con enfoque en análisis, SQL, Python y visualización.
+        Me gusta transformar datos en información clara para apoyar decisiones y optimizar procesos.
+      </p>
 
-.grid{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap:16px;
-  margin-top:16px;
-}
+      <div class="divider"></div>
 
-@media (min-width: 960px){
-  .grid{
-    grid-template-columns: 340px 1fr;
-    align-items:start;
-  }
-}
+      <h2 class="section-title">Skills</h2>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Pandas</span>
+        <span class="chip">NumPy</span>
+        <span class="chip">Matplotlib</span>
+        <span class="chip">Git</span>
+        <span class="chip">GitHub</span>
+        <span class="chip">Render</span>
+      </div>
 
-.col{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
+      <div class="divider"></div>
 
-.card{
-  background:var(--paper);
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-  border-radius:16px;
-  padding:18px 18px;
-}
+      <h2 class="section-title">Contacto</h2>
+      <ul class="meta">
+        <li><span class="meta__k">Ubicación</span><span class="meta__v">Colombia · Remoto</span></li>
+        <li><span class="meta__k">Correo</span><span class="meta__v"><a href="mailto:mangelicam02@gmail.com">mangelicam02@gmail.com</a></span></li>
+      </ul>
 
-.section-title{
-  margin:0 0 10px;
-  font-size:14px;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  color:var(--muted);
-}
+      <p class="muted small">Tip: este sitio se imprime bonito (Ctrl+P → Guardar como PDF).</p>
+    </aside>
 
-.text{
-  margin:0;
-  color:var(--ink);
-  line-height:1.55;
-  font-size:14px;
-}
+    <!-- Columna derecha -->
+    <section class="content">
+      <section class="card">
+        <div class="card__head">
+          <h2 class="section-title">Proyectos</h2>
+          <span class="pill">Bootcamp · TripleTen</span>
+        </div>
 
-.skills{display:flex; flex-direction:column; gap:12px;}
-.skills__title{
-  margin:0 0 8px;
-  font-size:13px;
-  color:var(--ink);
-}
-.chips{display:flex; flex-wrap:wrap; gap:8px;}
-.chip{
-  display:inline-flex;
-  padding:7px 10px;
-  border-radius:999px;
-  background:var(--chip);
-  border:1px solid var(--line);
-  font-size:12px;
-  color:var(--ink);
-}
+        <!-- PROYECTO 1 -->
+        <article class="project">
+          <div class="project__top">
+            <h3 class="project__title">Panel de Control Web desplegado en la nube</h3>
+            <div class="project__links">
+              <!-- Cambia links -->
+              <a class="link" href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noreferrer">Repo</a>
+              <a class="link" href="https://tu-app.onrender.com" target="_blank" rel="noreferrer">Demo</a>
+            </div>
+          </div>
 
-.list{
-  margin:0;
-  padding-left:18px;
-  color:var(--ink);
-  line-height:1.6;
-  font-size:14px;
-}
-.bold{font-weight:600;}
-.muted{color:var(--muted);}
-.small{font-size:12px;}
+          <p class="project__desc">
+            Aplicación web tipo dashboard: estructura del proyecto, manejo de entornos virtuales y despliegue en la nube.
+          </p>
 
-.edu{display:flex; flex-direction:column; gap:10px;}
-.edu__top{display:flex; flex-direction:column; gap:4px; font-size:14px;}
+          <ul class="bullets">
+            <li><b>Contexto:</b> creación de un panel web y despliegue público.</li>
+            <li><b>Qué hice:</b> venv, dependencias, buenas prácticas, configuración de deploy.</li>
+            <li><b>Herramientas:</b> Python, venv, Git/GitHub, Render.</li>
+            <li><b>Resultado:</b> aplicación disponible públicamente y pipeline de trabajo ordenado.</li>
+          </ul>
+        </article>
 
-.project{border-top:1px solid var(--line); padding-top:14px; margin-top:14px;}
-.project:first-of-type{border-top:none; padding-top:0; margin-top:0;}
-.project__header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-}
-.project__title{
-  margin:0;
-  font-size:15px;
-  font-weight:700;
-}
-.badge{
-  font-size:12px;
-  padding:6px 10px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  color:var(--accent);
-  background:#f8fafc;
-  white-space:nowrap;
-}
+        <div class="hr"></div>
 
-.job{border-top:1px solid var(--line); padding-top:14px; margin-top:14px;}
-.job:first-of-type{border-top:none; padding-top:0; margin-top:0;}
-.job__top{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:12px;
-}
-.job__title{margin:0; font-size:15px; font-weight:700;}
-.job__role{margin:4px 0 0; color:var(--accent); font-weight:600;}
-.job__meta{display:flex; flex-direction:column; gap:4px; text-align:right; font-size:12px;}
+        <!-- PROYECTO 2 (duplica este bloque para más proyectos) -->
+        <article class="project">
+          <div class="project__top">
+            <h3 class="project__title">Proyecto 2 · (título aquí)</h3>
+            <div class="project__links">
+              <a class="link" href="https://github.com/tu-usuario/tu-repo" target="_blank" rel="noreferrer">Repo</a>
+            </div>
+          </div>
 
-.bullets{
-  margin:10px 0 0;
-  padding-left:18px;
-  line-height:1.55;
-  font-size:14px;
-}
+          <p class="project__desc">
+            Describe en 1 línea el objetivo del proyecto.
+          </p>
 
-.footer{margin-top:2px;}
+          <ul class="bullets">
+            <li><b>Objetivo:</b> …</li>
+            <li><b>Datos:</b> …</li>
+            <li><b>Herramientas:</b> Python, SQL, …</li>
+            <li><b>Hallazgo:</b> …</li>
+          </ul>
+        </article>
+      </section>
 
-/* PRINT: clean A4-like output */
-@media print{
-  body{background:#fff;}
-  .page{margin:0; padding:0;}
-  .header, .card{box-shadow:none;}
-  .header, .card{border-color:#d1d5db;}
-  a{color:#000; text-decoration:none;}
-}
+      <section class="card">
+        <h2 class="section-title">Experiencia (Resumen)</h2>
+        <ul class="bullets">
+          <li><b>Banco Caja Social:</b> experiencia en banca, procesos, control y análisis de información para decisiones.</li>
+          <li><b>Enfoque actual:</b> análisis de datos con Python/SQL + proyectos desplegados.</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p class="muted small">© <span id="y"></span> María Angélica Rueda</p>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
